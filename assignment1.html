@@ -46,10 +46,10 @@
     </div>
 
         <div onkeypress={handleKeyPress}>
-        <lightning-input label="Account Name" type="text" onchange={handleChange} value={accountName}></lightning-input>
-        <lightning-input label="Account Industry" type="text" onchange={handleChange} value={accountIndustry}></lightning-input>
-        <lightning-input label="Account Sector" type="text" onchange={handleChange} value={accountSector}></lightning-input>
-        <lightning-input label="Account Phone" type="text" onchange={handleChange} value={accountPhone}></lightning-input>
+        <lightning-input name="Name" label="Account Name" type="text" onchange={handleChange} value={accountName}></lightning-input>
+        <lightning-input name="Industry" label="Account Industry" type="text" onchange={handleChange} value={accountIndustry}></lightning-input>
+        <lightning-input name="Sector" label="Account Sector" type="text" onchange={handleChange} value={accountSector}></lightning-input>
+        <lightning-input name="Phone" label="Account Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onchange={handleChange} value={accountPhone}></lightning-input>
         </div>
     </lightning-card>
     </template>

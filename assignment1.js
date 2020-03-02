@@ -1,33 +1,23 @@
 import { LightningElement, track } from 'lwc';
 
 export default class App extends LightningElement {
-    @track accounts = [
-        {
-        Id: 1,
-        Name: 'Austin Hubbard',
-        Industry: 'Information Technology',
-        Sector: 'Developement',
-        Phone: '2144041183',
-        },
-    ]
+    @track accounts = [];
     @track accountName = "";
     @track accountIndustry = "";
     @track accountSector = "";
     @track accountPhone = "";
-    @track idGenerator = 2;
+    @track idGenerator = 1;
 
 handleChange(event){
-const field = event.target.name;
-if(field === "accountName"){
+if(event.target.name === "Name"){
     this.accountName = event.target.value;
-}else if(field === "accountIndustry"){
+} else if(event.target.name === "Industry"){
     this.accountIndustry = event.target.value;
-}else if(field === "accountSector"){
+} else if(event.target.name === "Sector"){
     this.accountSector = event.target.value;
-}else if(field === "accountPhone"){
+} else if(event.target.name === "Phone"){
     this.accountPhone = event.target.value;
-    }
-}
+}}
 handleKeyPress(event){
     var currentId = this.idGenerator;
     if(event.keyCode === 13){
