@@ -1,11 +1,11 @@
 <template>
 <lightning-card title="Account Details" icon-name="action:add_contact">
---> Using lightning-layout to form above table    
+ <!-- Using lightning-layout to form above table -->   
     <lightning-layout>
             <lightning-layout-item padding="around-small">
                 <div class="header-column">
                     <p class="field-title" title="Field 1">Account Name</p>
-                --> Dynamic list to effectively display information 
+                <!-- Dynamic list to effectively display information -->
                     <template for:each={accounts} for:item="account"> 
                         <li  key={accounts.id}>    
                             {account.Name}
@@ -16,7 +16,7 @@
             <lightning-layout-item padding="around-small">
                 <div class="header-column">
                     <p class="field-title" title="Field 2">Account Industry</p>
-                --> Dynamic list to effectively display information
+                <!-- Dynamic list to effectively display information -->
                     <template for:each={accounts} for:item="account"> 
                         <li  key={accounts.id}>    
                             {account.Industry}
@@ -27,7 +27,7 @@
             <lightning-layout-item padding="around-small">
                 <div class="header-column">
                     <p class="field-title" title="Field 3">Account Sector</p>
-                --> Dynamic list to effectively display information
+                <!--Dynamic list to effectively display information -->
                     <template for:each={accounts} for:item="account"> 
                         <li  key={accounts.id}>    
                             {account.Sector}
@@ -38,7 +38,7 @@
             <lightning-layout-item padding="around-small">
                 <div class="header-column">
                     <p class="field-title" title="Field 4">Account Phone</p>
-                --> Dynamic list to effectively display information
+                <!--Dynamic list to effectively display information -->
                     <template for:each={accounts} for:item="account"> 
                         <li  key={accounts.id}>    
                             {account.Phone}
@@ -47,9 +47,9 @@
                 </div>
             </lightning-layout-item>
         </lightning-layout>
-    --> Key Press event to enter inputs into dynamic list  
+     <!-- Key Press event to enter inputs into dynamic list --> 
         <div onkeypress={handleKeyPress}>
-    --> Input fields with name, label, onchange event, and value (added pattern to phone input field)
+     <!-- Input fields with name, label, onchange event, and value (added pattern to phone input field) -->
         <lightning-input name="Name" label="Account Name" type="text" onchange={handleChange} value={accountName}></lightning-input>
         <lightning-input name="Industry" label="Account Industry" type="text" onchange={handleChange} value={accountIndustry}></lightning-input>
         <lightning-input name="Sector" label="Account Sector" type="text" onchange={handleChange} value={accountSector}></lightning-input>
