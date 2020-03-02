@@ -6,8 +6,9 @@ export default class App extends LightningElement {
     @track accountIndustry = "";
     @track accountSector = "";
     @track accountPhone = "";
+// idGenerator effectively assigns an id to each input to create new row 
     @track idGenerator = 1;
-
+// Change event allows for name variable to be linked to lightning input fields
 handleChange(event){
 if(event.target.name === "Name"){
     this.accountName = event.target.value;
@@ -18,6 +19,7 @@ if(event.target.name === "Name"){
 } else if(event.target.name === "Phone"){
     this.accountPhone = event.target.value;
 }}
+// Key Press event enters information into table upon pressing enter key
 handleKeyPress(event){
     var currentId = this.idGenerator;
     if(event.keyCode === 13){
